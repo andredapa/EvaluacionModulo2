@@ -1,10 +1,96 @@
-.bg-success {
-    --bs-bg-opacity: 1;
-    background-color: rgba(var(--bs-success-rgb), var(--bs-bg-opacity)) !important;
+
+/* Custom CSS */
+body {
+    background-color: #e9ecef;
 }
 
-.amenazas {
+.card {
+    border: none;
+}
+
+/* --- Estilos para el Carrusel --- */
+#miCarrusel {
+    max-width: 700px; /* Ajusta este valor según lo que consideres "menos espacio" */
+    margin: 0 auto; /* Centra el carrusel en la página */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.carousel-item {
+    height: 400px; /* Ajusta esta altura para el tamaño deseado de las imágenes del carrusel */
+    background-color: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-item img {
+    height: 100%;
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    object-fit: cover; /* Recorta la imagen para que cubra todo el espacio sin distorsionarse */
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 5px;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 500px;
+}
+
+.carousel-caption h5 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.carousel-caption ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.carousel-caption li {
+    color: #fff;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+
+@media (max-width: 767.98px) {
+    .carousel-caption {
+        bottom: 5px;
+        padding: 10px;
+        font-size: 0.8em;
+    }
+    .carousel-caption h5 {
+        font-size: 1.1em;
+    }
+    .carousel-caption li {
+        font-size: 0.8em;
+    }
+    #miCarrusel {
+        max-width: 100%;
+    }
+    .carousel-item {
+        height: 300px;
+    }
+}
+
+/* --- Nuevos estilos para la imagen del modal --- */
+#modalImage {
+    max-height: 200px; /* Define una altura máxima para todas las imágenes del modal */
+    width: auto; /* Permite que el ancho se ajuste automáticamente */
+    object-fit: contain; /* Asegura que la imagen completa sea visible sin recortarse */
+    display: block; /* Asegura que se apliquen los márgenes automáticos para centrar */
+    margin: 0 auto; /* Centra la imagen si es más estrecha que el modal */
+}
+
+/* Ajustes para la imagen del modal en pantallas más pequeñas */
+@media (max-width: 575.98px) { /* Para dispositivos extra pequeños como teléfonos */
+    #modalImage {
+        max-height: 300px; /* Reduce la altura máxima en pantallas muy pequeñas */
+    }
 }
